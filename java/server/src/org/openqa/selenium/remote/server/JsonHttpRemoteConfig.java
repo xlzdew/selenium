@@ -116,6 +116,8 @@ import org.openqa.selenium.remote.server.handler.interactions.DoubleClickInSessi
 import org.openqa.selenium.remote.server.handler.interactions.MouseDown;
 import org.openqa.selenium.remote.server.handler.interactions.MouseMoveToLocation;
 import org.openqa.selenium.remote.server.handler.interactions.MouseUp;
+import org.openqa.selenium.remote.server.handler.interactions.RobotKeyPress;
+import org.openqa.selenium.remote.server.handler.interactions.RobotKeyRelease;
 import org.openqa.selenium.remote.server.handler.interactions.SendKeyToActiveElement;
 import org.openqa.selenium.remote.server.handler.interactions.touch.DoubleTapOnElement;
 import org.openqa.selenium.remote.server.handler.interactions.touch.Down;
@@ -485,5 +487,11 @@ public class JsonHttpRemoteConfig {
         .on(ResultType.SUCCESS, jsonResponse);
     postMapper.bind("/logs", GetSessionLogsHandler.class)
         .on(ResultType.SUCCESS, jsonResponse);
+    //lingzhi.xlz -- Robot APIs
+    postMapper.bind("/session/:sessionId/robot/keypress", RobotKeyPress.class)
+    .on(ResultType.SUCCESS, emptyResponse);
+    postMapper.bind("/session/:sessionId/robot/keyRelease", RobotKeyRelease.class)
+    .on(ResultType.SUCCESS, emptyResponse);
+    
   }
 }
