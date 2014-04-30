@@ -1,0 +1,8 @@
+tree 974f91fdb3777816b781918acd395a59b4e043e9
+parent 9efeb675a9369761e5274dba53197e4a22201ddd
+author Michael Tamm <michael.tamm2@gmail.com> 1211473862 +0000
+committer Michael Tamm <michael.tamm2@gmail.com> 1211473862 +0000
+
+MichaelTamm: refactored WebDriverEventListener: only one beforeFindBy and afterFindBy method, fixed EventFiringWebDriver$EventFiringWebElement.findElement method
+
+r5228
