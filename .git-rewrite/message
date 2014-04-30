@@ -1,3 +1,0 @@
-MichaelTamm: refactored WebDriverEventListener: only one beforeFindBy and afterFindBy method, fixed EventFiringWebDriver$EventFiringWebElement.findElement method
-
-r5228
