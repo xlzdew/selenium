@@ -249,6 +249,11 @@ public class HttpCommandExecutor implements CommandExecutor, NeedsLocalLogs {
 
         .put(GET_LOG, post("/session/:sessionId/log"))
         .put(GET_AVAILABLE_LOG_TYPES, get("/session/:sessionId/log/types"))
+        
+        	//lingzhi.xlz--- for robot key API commands
+        .put(ROBOT_KEYPRESS,post("/session/:sessionId/robot/keypress"))
+        .put(ROBOT_KEYRELEASE,post("/session/:sessionId/robot/keyRelease"))
+    
 
         .put(STATUS, get("/status"));
 

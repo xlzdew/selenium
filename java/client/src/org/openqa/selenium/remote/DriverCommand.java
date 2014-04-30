@@ -164,4 +164,8 @@ public interface DriverCommand {
   // Logging API
   String GET_AVAILABLE_LOG_TYPES = "getAvailableLogTypes";
   String GET_LOG = "getLog";
+  
+  //lingzhi.xlz--Robot key API
+  String ROBOT_KEYPRESS= "robot_keyPress";
+  String ROBOT_KEYRELEASE= "robot_keyRelease";
 }
